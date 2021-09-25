@@ -37,6 +37,10 @@ namespace RepositoryLayer.Services
             }
         }
 
+        public void model()
+        {
+
+        }
        
 
         public ResponseModel ForgotPassword(ForgotPasswordModel model)
