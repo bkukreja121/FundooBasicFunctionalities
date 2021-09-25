@@ -1,0 +1,165 @@
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.exe
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.deps.json
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.runtimeconfig.json
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.runtimeconfig.dev.json
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.pdb
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\RepositoryLayer.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\RepositoryLayer.pdb
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.csproj.AssemblyReference.cache
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.AssemblyInfoInputs.cache
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.AssemblyInfo.cs
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.csproj.CoreCompileInputs.cache
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\staticwebassets\FundooNotes.StaticWebAssets.Manifest.cache
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\staticwebassets\FundooNotes.StaticWebAssets.xml
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\scopedcss\bundle\FundooNotes.styles.css
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.RazorTargetAssemblyInfo.cache
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.csproj.CopyComplete
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.pdb
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.genruntimeconfig.cache
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\BusinessLayer.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\kkancha\source\repos\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.exe
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.deps.json
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.runtimeconfig.json
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.runtimeconfig.dev.json
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\BusinessLayer.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\RepositoryLayer.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\RepositoryLayer.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.csproj.AssemblyReference.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.AssemblyInfoInputs.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.AssemblyInfo.cs
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.csproj.CoreCompileInputs.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\staticwebassets\FundooNotes.StaticWebAssets.Manifest.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\staticwebassets\FundooNotes.StaticWebAssets.xml
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\scopedcss\bundle\FundooNotes.styles.css
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.RazorTargetAssemblyInfo.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.csproj.CopyComplete
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.genruntimeconfig.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll

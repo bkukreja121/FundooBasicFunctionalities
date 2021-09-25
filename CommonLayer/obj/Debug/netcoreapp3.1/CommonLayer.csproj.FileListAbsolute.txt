@@ -1,0 +1,25 @@
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.deps.json
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.runtimeconfig.json
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.runtimeconfig.dev.json
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfoInputs.cache
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfo.cs
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.genruntimeconfig.cache
+C:\Users\kkancha\source\repos\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.AssemblyReference.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.deps.json
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.runtimeconfig.json
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.runtimeconfig.dev.json
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.AssemblyReference.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfoInputs.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfo.cs
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.genruntimeconfig.cache
