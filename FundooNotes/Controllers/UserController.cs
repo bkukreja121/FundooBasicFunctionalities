@@ -99,7 +99,7 @@ namespace FundooNotes.Controllers
             return this.Ok(new { success = true, message = "HELLO" });
         }
 
-        private static string GenerateJwtToken(long UserId, string EmailId)
+        private  static  string GenerateJwtToken(long UserId, string EmailId)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -150,6 +150,7 @@ namespace FundooNotes.Controllers
             }
 
         }
+        [HttpGet("getTokenID")]
 
         public long GetTokenId()
         {
