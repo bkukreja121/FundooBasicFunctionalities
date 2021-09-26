@@ -22,6 +22,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using BusinessLayer.Interface;
+using BusinessLayer.Services;
 
 namespace FundooNotes
 {
@@ -99,6 +101,10 @@ namespace FundooNotes
             
             services.AddScoped<IUserBL, UserBL>();
             services.AddScoped<IUserRL, UserRL>();
+            services.AddScoped<INotesBL, NotesBL>();
+            services.AddScoped<INotesRL, NotesRL>();
+
+
             services.AddControllers();
 
 

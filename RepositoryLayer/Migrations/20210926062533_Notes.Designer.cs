@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RepositoryLayer.Context;
 
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(UserContext))]
-    partial class UserContextModelSnapshot : ModelSnapshot
+    [Migration("20210926062533_Notes")]
+    partial class Notes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,32 +61,12 @@ namespace RepositoryLayer.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("UserId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Notes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AddReminder = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Color = "Blue",
-                            CreatedDate = new DateTime(2021, 9, 26, 13, 13, 57, 849, DateTimeKind.Local).AddTicks(3689),
-                            Image = "image1",
-                            IsArchive = false,
-                            IsNote = false,
-                            IsPin = false,
-                            IsTrash = false,
-                            Message = "This is my first note",
-                            ModifiedDate = new DateTime(2021, 9, 26, 13, 13, 57, 849, DateTimeKind.Local).AddTicks(6565),
-                            Title = "FirstNote",
-                            UserId = 1L
-                        });
                 });
 
             modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
@@ -141,22 +123,6 @@ namespace RepositoryLayer.Migrations
                             ModifiedAt = new DateTime(2020, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Password = "1234"
                         });
-                });
-
-            modelBuilder.Entity("RepositoryLayer.Entity.Notes", b =>
-                {
-                    b.HasOne("RepositoryLayer.Entity.User", "User")
-                        .WithMany("Notes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
-                {
-                    b.Navigation("Notes");
                 });
 #pragma warning restore 612, 618
         }
