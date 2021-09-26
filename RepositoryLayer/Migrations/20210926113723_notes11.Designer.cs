@@ -10,8 +10,8 @@ using RepositoryLayer.Context;
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20210926062533_Notes")]
-    partial class Notes
+    [Migration("20210926113723_notes11")]
+    partial class notes11
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -61,12 +61,30 @@ namespace RepositoryLayer.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
                     b.ToTable("Notes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AddReminder = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Color = "Blue",
+                            CreatedDate = new DateTime(2021, 9, 26, 17, 7, 22, 819, DateTimeKind.Local).AddTicks(5039),
+                            Image = "image1",
+                            IsArchive = false,
+                            IsNote = false,
+                            IsPin = false,
+                            IsTrash = false,
+                            Message = "This is my first note",
+                            ModifiedDate = new DateTime(2021, 9, 26, 17, 7, 22, 819, DateTimeKind.Local).AddTicks(9115),
+                            Title = "FirstNote",
+                            UserId = 3L
+                        });
                 });
 
             modelBuilder.Entity("RepositoryLayer.Entity.User", b =>

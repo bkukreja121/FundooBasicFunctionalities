@@ -64,8 +64,6 @@ namespace RepositoryLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Notes");
 
                     b.HasData(
@@ -74,16 +72,16 @@ namespace RepositoryLayer.Migrations
                             Id = 1,
                             AddReminder = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Color = "Blue",
-                            CreatedDate = new DateTime(2021, 9, 26, 13, 13, 57, 849, DateTimeKind.Local).AddTicks(3689),
+                            CreatedDate = new DateTime(2021, 9, 26, 17, 7, 22, 819, DateTimeKind.Local).AddTicks(5039),
                             Image = "image1",
                             IsArchive = false,
                             IsNote = false,
                             IsPin = false,
                             IsTrash = false,
                             Message = "This is my first note",
-                            ModifiedDate = new DateTime(2021, 9, 26, 13, 13, 57, 849, DateTimeKind.Local).AddTicks(6565),
+                            ModifiedDate = new DateTime(2021, 9, 26, 17, 7, 22, 819, DateTimeKind.Local).AddTicks(9115),
                             Title = "FirstNote",
-                            UserId = 1L
+                            UserId = 3L
                         });
                 });
 
@@ -141,22 +139,6 @@ namespace RepositoryLayer.Migrations
                             ModifiedAt = new DateTime(2020, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Password = "1234"
                         });
-                });
-
-            modelBuilder.Entity("RepositoryLayer.Entity.Notes", b =>
-                {
-                    b.HasOne("RepositoryLayer.Entity.User", "User")
-                        .WithMany("Notes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
-                {
-                    b.Navigation("Notes");
                 });
 #pragma warning restore 612, 618
         }

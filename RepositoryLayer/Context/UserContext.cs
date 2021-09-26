@@ -46,7 +46,7 @@ namespace RepositoryLayer.Context
             }
             );
 
-            modelBuilder.Entity<Notes>().HasData(new Notes
+            modelBuilder.Entity<Notes>().HasData(new Entity.Notes
             {
                 Id = 1,
                 Title = "FirstNote",
@@ -57,7 +57,7 @@ namespace RepositoryLayer.Context
                 CreatedDate = DateTime.Now,
                 ModifiedDate = DateTime.Now,
                 AddReminder = DateTime.MinValue,
-                UserId = 1,
+                UserId = 3,
                 IsArchive = false,
                 IsNote = false,
                 IsTrash = false,

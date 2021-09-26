@@ -48,9 +48,31 @@ namespace RepositoryLayer.Services
 
         }
 
-        public IEnumerable<Notes> GetAll()
+        public Notes Get(long Id)
+        {
+            return _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+        }
+
+        public IEnumerable<Notes> Display()
         {
             return _userContext.Notes.ToList();
+        }
+
+        public bool Delete(Notes notes)
+        {
+            _userContext.Notes.Remove(notes);
+            var result = _userContext.SaveChanges();
+
+            if (result > 0)
+            {
+                return true;
+
+            }
+
+            else
+            {
+                return false;
+            }
         }
     }
 }

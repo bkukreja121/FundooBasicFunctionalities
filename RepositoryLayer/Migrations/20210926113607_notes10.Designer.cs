@@ -10,8 +10,8 @@ using RepositoryLayer.Context;
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20210926074358_Notes2")]
-    partial class Notes2
+    [Migration("20210926113607_notes10")]
+    partial class notes10
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -66,27 +66,7 @@ namespace RepositoryLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Notes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AddReminder = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Color = "Blue",
-                            CreatedDate = new DateTime(2021, 9, 26, 13, 13, 57, 849, DateTimeKind.Local).AddTicks(3689),
-                            Image = "image1",
-                            IsArchive = false,
-                            IsNote = false,
-                            IsPin = false,
-                            IsTrash = false,
-                            Message = "This is my first note",
-                            ModifiedDate = new DateTime(2021, 9, 26, 13, 13, 57, 849, DateTimeKind.Local).AddTicks(6565),
-                            Title = "FirstNote",
-                            UserId = 1L
-                        });
                 });
 
             modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
@@ -143,22 +123,6 @@ namespace RepositoryLayer.Migrations
                             ModifiedAt = new DateTime(2020, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Password = "1234"
                         });
-                });
-
-            modelBuilder.Entity("RepositoryLayer.Entity.Notes", b =>
-                {
-                    b.HasOne("RepositoryLayer.Entity.User", "User")
-                        .WithMany("Notes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
-                {
-                    b.Navigation("Notes");
                 });
 #pragma warning restore 612, 618
         }

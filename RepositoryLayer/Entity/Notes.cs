@@ -19,13 +19,13 @@ namespace RepositoryLayer.Entity
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public DateTime AddReminder { get; set; }
-        [ForeignKey("Users")]
+       
         public long UserId { get; set; }     /// foreign key..
         public bool IsArchive { get; set; }
         public bool IsNote { get; set; }
         public bool IsTrash { get; set; }
 
 
-        public virtual User User { get; set; }
+        //public virtual User User { get; set; }
     }
 }
