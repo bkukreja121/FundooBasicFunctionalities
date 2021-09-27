@@ -77,6 +77,20 @@ namespace FundooNotes.Controllers
 
         }
 
+        [HttpPut("archive/{Id}")]
+        public IActionResult ArchiveNote(long Id)
+        {
+            var result = _notesBL.ArchiveNote( Id);
+            if (result == true)
+            {
+                return this.Ok(new { success = true, message = "IsArchive function successfull" });
+            }
+            else
+            {
+                return this.BadRequest(new { success = false, message = "IsArchive function unsuccessfull" });
+            }
+        }
+
         //Edit Notes
         [HttpPut("Edit/{Id}")]
         public IActionResult EditNotes(EditNotesModel editNotesModel, long Id)
