@@ -22,3 +22,4 @@ C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\Fun
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.genruntimeconfig.cache
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\23-09-21\FundooNotes (1)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.AssemblyReference.cache

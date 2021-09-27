@@ -98,13 +98,11 @@ namespace FundooNotes
                     }
                 });
             });
-            
+            //part of Dependency Injection 
             services.AddScoped<IUserBL, UserBL>();
             services.AddScoped<IUserRL, UserRL>();
             services.AddScoped<INotesBL, NotesBL>();
             services.AddScoped<INotesRL, NotesRL>();
-
-
             services.AddControllers();
 
 
@@ -121,8 +119,6 @@ namespace FundooNotes
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-           
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseSwagger();

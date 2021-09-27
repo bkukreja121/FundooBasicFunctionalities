@@ -32,9 +32,6 @@ namespace FundooNotes.Controllers
             _config = config;
         }
 
-
-
-
         // GET: api/user
         [HttpGet]
         public IActionResult Get()
@@ -103,11 +100,11 @@ namespace FundooNotes.Controllers
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
+            //payload
             var permClaims = new List<Claim>();
             permClaims.Add(new Claim("Id", UserId.ToString()));
             permClaims.Add(new Claim(ClaimTypes.Email, EmailId));
-
+            //signature 
             var token = new JwtSecurityToken(_config["Jwt:Issuer"],
               _config["Jwt:Issuer"],
               permClaims,

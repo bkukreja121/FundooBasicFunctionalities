@@ -74,6 +74,23 @@ namespace FundooNotes.Controllers
 
 
 
+
+        }
+
+        //Edit Notes
+        [HttpPut("Edit/{Id}")]
+        public IActionResult EditNotes(EditNotesModel editNotesModel, long Id)
+        {
+           
+            var result = _notesBL.EditNotes(editNotesModel, Id);
+            if (result == true)
+            {
+                return this.Ok(new { success = true, message = "Notes Edited Successfully" });
+            }
+            else
+            {
+                return this.BadRequest(new { success = false, message = "Note Edition Failed" });
+            }
         }
 
     }

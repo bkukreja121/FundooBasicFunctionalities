@@ -21,7 +21,7 @@ namespace RepositoryLayer.Entity
         public DateTime  CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
 
-        //public virtual ICollection<Notes> Notes { get; set; }
+      public virtual ICollection<Notes> Notes { get; set; }
 
     }
 }

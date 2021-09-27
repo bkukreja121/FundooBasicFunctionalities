@@ -26,6 +26,6 @@ namespace RepositoryLayer.Entity
         public bool IsTrash { get; set; }
 
 
-        //public virtual User User { get; set; }
+        public virtual User User { get; set; }
     }
 }

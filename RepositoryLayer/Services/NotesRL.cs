@@ -74,5 +74,34 @@ namespace RepositoryLayer.Services
                 return false;
             }
         }
+
+      
+            public bool EditNotes(EditNotesModel editNotesModel, long Id)
+            {
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                try
+                {
+                    notes.Title = editNotesModel.Title;
+                    notes.Message = editNotesModel.Message;
+                    notes.Image = editNotesModel.Image;
+                    notes.Color = editNotesModel.Color;
+                    notes.ModifiedDate = editNotesModel.ModifiedDate;
+                    _userContext.Notes.Update(notes);
+                    int result = _userContext.SaveChanges();
+                    if (result > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+        }
     }
-}
