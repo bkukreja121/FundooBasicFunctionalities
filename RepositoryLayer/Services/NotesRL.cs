@@ -130,5 +130,24 @@ namespace RepositoryLayer.Services
                 return false;
             }
         }
+
+            public bool ChangeColor(long Id, ChangeColorModel changeColorModel)
+            {
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                notes.Color = changeColorModel.Color;
+
+
+                _userContext.Notes.Update(notes);
+                int result = _userContext.SaveChanges();
+                if (result > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
-    }
+    

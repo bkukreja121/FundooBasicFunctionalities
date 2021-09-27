@@ -83,6 +83,17 @@ namespace BusinessLayer.Services
                 throw;
             }
         }
+        public bool ChangeColor(long Id, ChangeColorModel changeColorModel)
+        {
+            try
+            {
+                return this._notesRL.ChangeColor(Id, changeColorModel);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
     
 }
