@@ -18,5 +18,6 @@ namespace RepositoryLayer.Interface
 
         bool ChangeColor(long Id, ChangeColorModel changeColorModel);
         bool IsPin(long id);
+        bool IsTrash(long id);
     }
 }

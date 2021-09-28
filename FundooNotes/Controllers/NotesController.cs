@@ -106,6 +106,21 @@ namespace FundooNotes.Controllers
             }
         }
 
+        //IsTrash
+        [HttpPut("IsTrash/{Id}")]
+        public IActionResult IsTrash(long Id)
+        {
+            var result = _notesBL.IsTrash(Id);
+            if (result == true)
+            {
+                return this.Ok(new { success = true, message = "IsTrash function successfull" });
+            }
+            else
+            {
+                return this.BadRequest(new { success = false, message = "IsTrash function unsuccessfull" });
+            }
+        }
+
 
         //Edit Notes
         [HttpPut("Edit/{Id}")]

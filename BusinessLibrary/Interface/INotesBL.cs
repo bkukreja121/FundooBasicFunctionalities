@@ -19,6 +19,8 @@ namespace BusinessLayer.Interface
 
         bool IsPin(long Id);
 
+        bool IsTrash(long Id);
+
         bool ChangeColor(long Id, ChangeColorModel changeColorModel);
     }
 }

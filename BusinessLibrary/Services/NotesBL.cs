@@ -95,6 +95,19 @@ namespace BusinessLayer.Services
                 throw;
             }
         }
+
+
+        public bool IsTrash(long Id)
+        {
+            try
+            {
+                return this._notesRL.IsTrash(Id);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
         public bool ChangeColor(long Id, ChangeColorModel changeColorModel)
         {
             try
