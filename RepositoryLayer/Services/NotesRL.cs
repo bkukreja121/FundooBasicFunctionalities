@@ -21,30 +21,38 @@ namespace RepositoryLayer.Services
         public bool CreateNotes(AddNotesModel model)
         {
 
-            Notes notesEntity = new Notes();
-            notesEntity.Id = model.Id;
-            notesEntity.Title = model.Title;
-            notesEntity.Message = model.Message;
-            notesEntity.Image = model.Image;
-            notesEntity.Color = model.Color;
-           
-            notesEntity.CreatedDate = model.CreatedDate;
-            notesEntity.ModifiedDate = model.ModifiedDate;
-            notesEntity.AddReminder = model.AddReminder;
-            notesEntity.UserId = model.UserId;
-            notesEntity.IsArchive = model.IsArchive;
-            notesEntity.IsPin = model.IsPin;
-            notesEntity.IsNote = model.IsNote;
-            notesEntity.IsTrash = model.IsTrash;
-            _userContext.Notes.Add(notesEntity);
-            int result = _userContext.SaveChanges();
-            if (result > 0)
+            try
             {
-                return true;
+                Notes notesEntity = new Notes();
+                notesEntity.Id = model.Id;
+                notesEntity.Title = model.Title;
+                notesEntity.Message = model.Message;
+                notesEntity.Image = model.Image;
+                notesEntity.Color = model.Color;
+
+                notesEntity.CreatedDate = DateTime.Now;
+                notesEntity.ModifiedDate = DateTime.Now;
+                notesEntity.AddReminder = model.AddReminder;
+                notesEntity.UserId = model.UserId;
+                notesEntity.IsArchive = model.IsArchive;
+                notesEntity.IsPin = model.IsPin;
+                notesEntity.IsNote = model.IsNote;
+                notesEntity.IsTrash = model.IsTrash;
+                _userContext.Notes.Add(notesEntity);
+                int result = _userContext.SaveChanges();
+                if (result > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Exception)
             {
-                return false;
+
+                throw;
             }
 
         }
@@ -61,18 +69,26 @@ namespace RepositoryLayer.Services
 
         public bool Delete(Notes notes)
         {
-            _userContext.Notes.Remove(notes);
-            var result = _userContext.SaveChanges();
-
-            if (result > 0)
+            try
             {
-                return true;
+                _userContext.Notes.Remove(notes);
+                var result = _userContext.SaveChanges();
 
+                if (result > 0)
+                {
+                    return true;
+
+                }
+
+                else
+                {
+                    return false;
+                }
             }
-
-            else
+            catch (Exception)
             {
-                return false;
+
+                throw;
             }
         }
 
@@ -105,6 +121,33 @@ namespace RepositoryLayer.Services
                 }
             }
 
+        public bool AddReminder(long Id, AddReminderModel addReminderModel)
+        {
+            try
+            {
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                notes.AddReminder = addReminderModel.AddReminder;
+                notes.ModifiedDate = DateTime.Now;
+
+
+
+                _userContext.Notes.Update(notes);
+                int result = _userContext.SaveChanges();
+                if (result > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
         public bool ArchiveNote(long Id)
         {
             Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
@@ -134,6 +177,8 @@ namespace RepositoryLayer.Services
 
             public bool ChangeColor(long Id, ChangeColorModel changeColorModel)
             {
+            try
+            {
                 Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
                 notes.Color = changeColorModel.Color;
 
@@ -149,59 +194,81 @@ namespace RepositoryLayer.Services
                     return false;
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            }
 
         public bool IsPin(long Id)
         {
-           
-            Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
-            if (notes.IsPin == false)
+
+            try
             {
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                if (notes.IsPin == false)
+                {
 
-                notes.IsPin = true;
+                    notes.IsPin = true;
 
+                }
+                else
+                {
+
+                    notes.IsPin = false;
+
+                }
+                _userContext.Notes.Update(notes);
+                int result = _userContext.SaveChanges();
+                if (result > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Exception )
             {
 
-                notes.IsPin = false;
-
-            }
-            _userContext.Notes.Update(notes);
-            int result = _userContext.SaveChanges();
-            if (result > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
+                throw;
             }
         }
 
         public bool IsTrash(long Id)
         {
 
-            Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
-            if (notes.IsTrash == false)
+            try
             {
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                if (notes.IsTrash == false)
+                {
 
-                notes.IsTrash = true;
+                    notes.IsTrash = true;
 
+                }
+                else
+                {
+
+                    notes.IsTrash = false;
+
+                }
+                _userContext.Notes.Update(notes);
+                int result = _userContext.SaveChanges();
+                if (result > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Exception)
             {
 
-                notes.IsTrash = false;
-
-            }
-            _userContext.Notes.Update(notes);
-            int result = _userContext.SaveChanges();
-            if (result > 0)
-            {
-                return true;
-            }
-            else
-            {
                 return false;
             }
         }

@@ -57,10 +57,21 @@ namespace BusinessLayer.Services
                 throw;
             }
         }
+        public bool AddReminder(long Id, AddReminderModel addReminderModel)
+        {
+            try
+            {
+                return this._notesRL.AddReminder(Id, addReminderModel);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
 
-      
-        
-            public bool EditNotes(EditNotesModel editNotesModel, long Id)
+
+
+        public bool EditNotes(EditNotesModel editNotesModel, long Id)
             {
                 try
                 {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\CommonLayer\\CommonLayer.csproj": {}
+    "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\CommonLayer\\CommonLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\CommonLayer\\CommonLayer.csproj": {
+    "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\CommonLayer\\CommonLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\CommonLayer\\CommonLayer.csproj",
+        "projectUniqueName": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\CommonLayer\\CommonLayer.csproj",
         "projectName": "CommonLayer",
-        "projectPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\CommonLayer\\CommonLayer.csproj",
+        "projectPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\CommonLayer\\CommonLayer.csproj",
         "packagesPath": "C:\\Users\\bkukrej\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\CommonLayer\\obj\\",
+        "outputPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\CommonLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -106,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }

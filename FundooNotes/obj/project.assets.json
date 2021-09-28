@@ -7045,11 +7045,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\FundooNotes\\FundooNotes.csproj",
+      "projectUniqueName": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\FundooNotes\\FundooNotes.csproj",
       "projectName": "FundooNotes",
-      "projectPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\FundooNotes\\FundooNotes.csproj",
+      "projectPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\FundooNotes\\FundooNotes.csproj",
       "packagesPath": "C:\\Users\\bkukrej\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\FundooNotes\\obj\\",
+      "outputPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\FundooNotes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7070,11 +7070,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\BusinessLibrary\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\BusinessLibrary\\BusinessLayer.csproj"
+            "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\BusinessLibrary\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\BusinessLibrary\\BusinessLayer.csproj"
             },
-            "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\RepositoryLayer\\RepositoryLayer.csproj": {
-              "projectPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\23-09-21\\FundooNotes (1)\\FundooNotes\\RepositoryLayer\\RepositoryLayer.csproj"
+            "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\RepositoryLayer\\RepositoryLayer.csproj": {
+              "projectPath": "C:\\Users\\bkukrej\\OneDrive - MORNINGSTAR INC\\Desktop\\BackUp(fundoo)\\FundooNotes\\RepositoryLayer\\RepositoryLayer.csproj"
             }
           }
         }
@@ -7150,7 +7150,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }

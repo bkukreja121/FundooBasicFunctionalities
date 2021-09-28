@@ -1,23 +1,25 @@
 ﻿
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using RepositoryLayer.Interface;
-using RepositoryLayer.Entity;
-using CommonLayer.Model;
-using BusinessLibrary.Interface;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.Extensions.Configuration;
-using System.IdentityModel.Tokens.Jwt;
-using Microsoft.AspNetCore.Authorization;
-using System.Security.Claims;
-using CommonLayer;
 
 namespace FundooNotes.Controllers
+
 {
+    using Microsoft.AspNetCore.Mvc;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using RepositoryLayer.Interface;
+    using RepositoryLayer.Entity;
+    using CommonLayer.Model;
+    using BusinessLibrary.Interface;
+    using Microsoft.IdentityModel.Tokens;
+    using System.Text;
+    using Microsoft.Extensions.Configuration;
+    using System.IdentityModel.Tokens.Jwt;
+    using Microsoft.AspNetCore.Authorization;
+    using System.Security.Claims;
+    using CommonLayer;
+
     [Route("api/user")]
 
     [ApiController]
@@ -36,8 +38,16 @@ namespace FundooNotes.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            IEnumerable<User> user = userBL.GetAll();
-            return Ok(user);
+            try
+            {
+                IEnumerable<User> user = userBL.GetAll();
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+
+                return this.BadRequest(new { success = false, message = ex.Message });
+            }
         }
        
       
@@ -45,20 +55,28 @@ namespace FundooNotes.Controllers
         [HttpPost]
         public IActionResult Register(RegisterModel user)
         {
-            if (user == null)
+            try
             {
-                return BadRequest("Employee is null.");
-            }
-            var result = userBL.Register(user);
-            if (result == true)
-            {
-                return this.Ok(new { success = true, message = "User successfully Registered" });
-            }
-            else
-            {
-                return this.BadRequest();
-            }
+                if (user == null)
+                {
+                    return BadRequest("Employee is null.");
+                }
+                var result = userBL.Register(user);
+                if (result == true)
+                {
+                    return this.Ok(new { success = true, message = "User successfully Registered" });
+                }
+                else
+                {
+                    return this.BadRequest();
+                }
 
+            }
+            catch (Exception ex)
+            {
+
+                return this.BadRequest(new { success = false, message = ex.Message });
+            }
         }
 
         [HttpPost("login")]
@@ -89,12 +107,7 @@ namespace FundooNotes.Controllers
 
         }
 
-        [Authorize]
-        [HttpGet("demo")]
-        public IActionResult Demo()
-        {
-            return this.Ok(new { success = true, message = "HELLO" });
-        }
+        
 
         private  static  string GenerateJwtToken(long UserId, string EmailId)
         {

@@ -5,21 +5,12 @@ using System.Text;
 
 namespace CommonLayer.Model.NotesModels
 {
-    public class EditNotesModel
+   public class AddReminderModel
     {
-    
-        [Required]
-        public string Title { get; set; }
 
         [Required]
-        public string Message { get; set; }
+        public DateTime AddReminder { get; set; }
         [Required]
-
-        public string Image { get; set; }
-        [Required]
-        public string Color { get; set; }
-     
-
         public DateTime ModifiedDate { get; set; }
     }
 }

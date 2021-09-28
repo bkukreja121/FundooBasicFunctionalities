@@ -22,5 +22,7 @@ namespace BusinessLayer.Interface
         bool IsTrash(long Id);
 
         bool ChangeColor(long Id, ChangeColorModel changeColorModel);
+
+        bool AddReminder(long Id, AddReminderModel addReminderModel);
     }
 }

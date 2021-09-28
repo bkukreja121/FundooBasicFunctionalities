@@ -25,26 +25,34 @@ namespace FundooNotes.Controllers
             _config = config;
         }
 
-        [HttpPost("createNotes")]
+        [HttpPost]
         public IActionResult CreateNotes(AddNotesModel model)
         {
-            if (model == null)
+            try
             {
-                return BadRequest("notes is empty.");
+                if (model == null)
+                {
+                    return BadRequest("notes is empty.");
+                }
+                var result = _notesBL.CreateNotes(model);
+                if (result == true)
+                {
+                    return this.Ok(new { success = true, message = "Note Created Successfully" });
+                }
+                else
+                {
+                    return this.BadRequest();
+                }
             }
-            var result = _notesBL.CreateNotes(model);
-            if (result == true)
+            catch (Exception ex)
             {
-                return this.Ok(new { success = true, message = "Note Created Successfully" });
-            }
-            else
-            {
-                return this.BadRequest();
+
+                return this.BadRequest(new { success = false, message = ex.Message });
             }
         }
 
         // GET: api/user
-        [HttpGet("DisplayNotes")]
+        [HttpGet]
         public IActionResult Display()
         {
             IEnumerable<Notes> notes = _notesBL.Display();
@@ -53,7 +61,7 @@ namespace FundooNotes.Controllers
 
 
 
-        [HttpDelete("Delete/{Id}")]
+        [HttpDelete("{Id}")]
         public IActionResult DeleteNotes(long Id)
         {
             Notes notes = _notesBL.Get(Id);
@@ -77,7 +85,7 @@ namespace FundooNotes.Controllers
 
         }
 
-        [HttpPut("archive/{Id}")]
+        [HttpPut("{Id}/Archive")]
         public IActionResult ArchiveNote(long Id)
         {
             var result = _notesBL.ArchiveNote( Id);
@@ -92,7 +100,7 @@ namespace FundooNotes.Controllers
         }
 
         //ISpin
-        [HttpPut("IsPin/{Id}")]
+        [HttpPut("{Id}/IsPin")]
         public IActionResult IsPin(long Id)
         {
             var result = _notesBL.IsPin(Id);
@@ -107,7 +115,7 @@ namespace FundooNotes.Controllers
         }
 
         //IsTrash
-        [HttpPut("IsTrash/{Id}")]
+        [HttpPut("{Id}/IsTrash")]
         public IActionResult IsTrash(long Id)
         {
             var result = _notesBL.IsTrash(Id);
@@ -123,7 +131,7 @@ namespace FundooNotes.Controllers
 
 
         //Edit Notes
-        [HttpPut("Edit/{Id}")]
+        [HttpPut("{Id}/Edit")]
         public IActionResult EditNotes(EditNotesModel editNotesModel, long Id)
         {
            
@@ -138,18 +146,48 @@ namespace FundooNotes.Controllers
             }
         }
 
+        [HttpPut("{Id}/addreminder")]
+        public IActionResult AddReminder(long Id, AddReminderModel addReminderModel)
+        {
+            try
+            {
+                var result = _notesBL.AddReminder(Id, addReminderModel);
+                if (result == true)
+                {
+                    return this.Ok(new { success = true, message = "Reminder Added Successfully " });
+                }
+                else
+                {
+                    return this.BadRequest(new { success = false, message = "Reminder adding unsuccessfull" });
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return this.BadRequest(new { success = false, message = ex.Message });
+            }
+        }
+
         // Change Color
-        [HttpPut("color/{Id}")]
+        [HttpPut("{Id}/color")]
         public IActionResult ChangeColor(long Id, ChangeColorModel changeColorModel)
         {
-            var result = _notesBL.ChangeColor(Id, changeColorModel);
-            if (result == true)
+            try
             {
-                return this.Ok(new { success = true, message = "Color change successfull" });
+                var result = _notesBL.ChangeColor(Id, changeColorModel);
+                if (result == true)
+                {
+                    return this.Ok(new { success = true, message = "Color change successfull" });
+                }
+                else
+                {
+                    return this.BadRequest(new { success = false, message = "Color Change unsuccessfull" });
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return this.BadRequest(new { success = false, message = "Color Change unsuccessfull" });
+
+                return this.BadRequest(new { success = false, message = ex.Message }); 
             }
         }
 

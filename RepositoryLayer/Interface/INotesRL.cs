@@ -14,6 +14,8 @@ namespace RepositoryLayer.Interface
         Notes Get(long Id);
         bool Delete(Notes notes);
         bool EditNotes(EditNotesModel editNotesModel, long Id);
+
+        bool AddReminder(long Id, AddReminderModel addReminderModel);
         bool ArchiveNote(long Id);
 
         bool ChangeColor(long Id, ChangeColorModel changeColorModel);
