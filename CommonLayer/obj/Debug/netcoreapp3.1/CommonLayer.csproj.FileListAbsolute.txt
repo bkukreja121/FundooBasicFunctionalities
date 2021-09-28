@@ -28,7 +28,6 @@ C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\C
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.runtimeconfig.dev.json
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
-C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.AssemblyReference.cache
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfoInputs.cache
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfo.cs
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache

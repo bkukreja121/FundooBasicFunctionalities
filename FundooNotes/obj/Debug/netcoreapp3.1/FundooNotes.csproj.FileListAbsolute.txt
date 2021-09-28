@@ -169,8 +169,6 @@ C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\F
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.csproj.CoreCompileInputs.cache
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.dll
-C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.pdb
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\FundooNotes.exe
@@ -246,4 +244,6 @@ C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\F
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\scopedcss\bundle\FundooNotes.styles.css
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.RazorTargetAssemblyInfo.cache
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.csproj.CopyComplete
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.dll
+C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.pdb
 C:\Users\bkukrej\OneDrive - MORNINGSTAR INC\Desktop\BackUp(fundoo)\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.genruntimeconfig.cache
