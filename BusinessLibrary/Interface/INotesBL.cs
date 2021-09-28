@@ -17,6 +17,8 @@ namespace BusinessLayer.Interface
         bool EditNotes(EditNotesModel editNotesModel, long Id);
         bool ArchiveNote(long Id);
 
+        bool IsPin(long Id);
+
         bool ChangeColor(long Id, ChangeColorModel changeColorModel);
     }
 }

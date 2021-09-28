@@ -91,6 +91,22 @@ namespace FundooNotes.Controllers
             }
         }
 
+        //ISpin
+        [HttpPut("IsPin/{Id}")]
+        public IActionResult IsPin(long Id)
+        {
+            var result = _notesBL.IsPin(Id);
+            if (result == true)
+            {
+                return this.Ok(new { success = true, message = "Ispin function successfull" });
+            }
+            else
+            {
+                return this.BadRequest(new { success = false, message = "Ispin function unsuccessfull" });
+            }
+        }
+
+
         //Edit Notes
         [HttpPut("Edit/{Id}")]
         public IActionResult EditNotes(EditNotesModel editNotesModel, long Id)

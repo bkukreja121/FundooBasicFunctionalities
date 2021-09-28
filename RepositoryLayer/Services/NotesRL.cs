@@ -27,12 +27,13 @@ namespace RepositoryLayer.Services
             notesEntity.Message = model.Message;
             notesEntity.Image = model.Image;
             notesEntity.Color = model.Color;
-            notesEntity.IsPin = model.IsPin;
+           
             notesEntity.CreatedDate = model.CreatedDate;
             notesEntity.ModifiedDate = model.ModifiedDate;
             notesEntity.AddReminder = model.AddReminder;
             notesEntity.UserId = model.UserId;
             notesEntity.IsArchive = model.IsArchive;
+            notesEntity.IsPin = model.IsPin;
             notesEntity.IsNote = model.IsNote;
             notesEntity.IsTrash = model.IsTrash;
             _userContext.Notes.Add(notesEntity);
@@ -148,6 +149,36 @@ namespace RepositoryLayer.Services
                     return false;
                 }
             }
+
+        public bool IsPin(long Id)
+        {
+           
+            Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+            if (notes.IsPin == false)
+            {
+
+                notes.IsPin = true;
+
+            }
+            else
+            {
+
+                notes.IsPin = false;
+
+            }
+            _userContext.Notes.Update(notes);
+            int result = _userContext.SaveChanges();
+            if (result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         }
     }
+   
     

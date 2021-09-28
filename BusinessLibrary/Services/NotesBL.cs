@@ -83,6 +83,18 @@ namespace BusinessLayer.Services
                 throw;
             }
         }
+
+        public bool IsPin(long Id)
+        {
+            try
+            {
+                return this._notesRL.IsPin(Id);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
         public bool ChangeColor(long Id, ChangeColorModel changeColorModel)
         {
             try

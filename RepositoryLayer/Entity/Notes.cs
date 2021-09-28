@@ -16,6 +16,7 @@ namespace RepositoryLayer.Entity
         public string Image { get; set; }
         public string Color { get; set; }
         public bool IsPin { get; set; }
+      
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public DateTime AddReminder { get; set; }
