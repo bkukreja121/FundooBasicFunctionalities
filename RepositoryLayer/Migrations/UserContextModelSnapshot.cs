@@ -19,6 +19,24 @@ namespace RepositoryLayer.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("RepositoryLayer.Entity.Collaboration", b =>
+                {
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UserId", "Id");
+
+                    b.HasIndex("Id");
+
+                    b.ToTable("Collaborations");
+                });
+
             modelBuilder.Entity("RepositoryLayer.Entity.Notes", b =>
                 {
                     b.Property<int>("Id")
@@ -64,8 +82,6 @@ namespace RepositoryLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Notes");
 
                     b.HasData(
@@ -73,17 +89,17 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 1,
                             AddReminder = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Color = "Blue",
-                            CreatedDate = new DateTime(2021, 9, 26, 23, 48, 40, 547, DateTimeKind.Local).AddTicks(3008),
-                            Image = "image1",
+                            Color = "White",
+                            CreatedDate = new DateTime(2021, 9, 29, 22, 52, 9, 344, DateTimeKind.Local).AddTicks(8365),
+                            Image = "abc.jpg",
                             IsArchive = false,
-                            IsNote = false,
+                            IsNote = true,
                             IsPin = false,
                             IsTrash = false,
-                            Message = "This is my first note",
-                            ModifiedDate = new DateTime(2021, 9, 26, 23, 48, 40, 547, DateTimeKind.Local).AddTicks(6763),
-                            Title = "FirstNote",
-                            UserId = 3L
+                            Message = "Hello, this is my new note",
+                            ModifiedDate = new DateTime(2021, 9, 29, 22, 52, 9, 345, DateTimeKind.Local).AddTicks(1723),
+                            Title = "New Note",
+                            UserId = 15L
                         });
                 });
 
@@ -143,20 +159,33 @@ namespace RepositoryLayer.Migrations
                         });
                 });
 
-            modelBuilder.Entity("RepositoryLayer.Entity.Notes", b =>
+            modelBuilder.Entity("RepositoryLayer.Entity.Collaboration", b =>
                 {
+                    b.HasOne("RepositoryLayer.Entity.Notes", "Notes")
+                        .WithMany("Collaborations")
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("RepositoryLayer.Entity.User", "User")
-                        .WithMany("Notes")
+                        .WithMany("Collaborations")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Notes");
+
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("RepositoryLayer.Entity.Notes", b =>
+                {
+                    b.Navigation("Collaborations");
                 });
 
             modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
                 {
-                    b.Navigation("Notes");
+                    b.Navigation("Collaborations");
                 });
 #pragma warning restore 612, 618
         }

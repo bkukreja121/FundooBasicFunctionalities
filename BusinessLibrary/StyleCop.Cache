@@ -4,10 +4,6 @@
     <configuration>
     </configuration>
   </project>
-  <project key="-1472804328">
-    <configuration>
-    </configuration>
-  </project>
   <sourcecode name="INotesBL.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2021-09-28 09:12:25.958</styleCop>
@@ -696,4 +692,8 @@
       </violation>
     </violations>
   </sourcecode>
+  <project key="-1472804328">
+    <configuration>
+    </configuration>
+  </project>
 </stylecopresultscache>

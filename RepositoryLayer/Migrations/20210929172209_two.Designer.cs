@@ -10,8 +10,8 @@ using RepositoryLayer.Context;
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20210926113723_notes11")]
-    partial class notes11
+    [Migration("20210929172209_two")]
+    partial class two
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,24 @@ namespace RepositoryLayer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("RepositoryLayer.Entity.Collaboration", b =>
+                {
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UserId", "Id");
+
+                    b.HasIndex("Id");
+
+                    b.ToTable("Collaborations");
+                });
 
             modelBuilder.Entity("RepositoryLayer.Entity.Notes", b =>
                 {
@@ -73,17 +91,17 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 1,
                             AddReminder = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Color = "Blue",
-                            CreatedDate = new DateTime(2021, 9, 26, 17, 7, 22, 819, DateTimeKind.Local).AddTicks(5039),
-                            Image = "image1",
+                            Color = "White",
+                            CreatedDate = new DateTime(2021, 9, 29, 22, 52, 9, 344, DateTimeKind.Local).AddTicks(8365),
+                            Image = "abc.jpg",
                             IsArchive = false,
-                            IsNote = false,
+                            IsNote = true,
                             IsPin = false,
                             IsTrash = false,
-                            Message = "This is my first note",
-                            ModifiedDate = new DateTime(2021, 9, 26, 17, 7, 22, 819, DateTimeKind.Local).AddTicks(9115),
-                            Title = "FirstNote",
-                            UserId = 3L
+                            Message = "Hello, this is my new note",
+                            ModifiedDate = new DateTime(2021, 9, 29, 22, 52, 9, 345, DateTimeKind.Local).AddTicks(1723),
+                            Title = "New Note",
+                            UserId = 15L
                         });
                 });
 
@@ -141,6 +159,35 @@ namespace RepositoryLayer.Migrations
                             ModifiedAt = new DateTime(2020, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Password = "1234"
                         });
+                });
+
+            modelBuilder.Entity("RepositoryLayer.Entity.Collaboration", b =>
+                {
+                    b.HasOne("RepositoryLayer.Entity.Notes", "Notes")
+                        .WithMany("Collaborations")
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RepositoryLayer.Entity.User", "User")
+                        .WithMany("Collaborations")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Notes");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("RepositoryLayer.Entity.Notes", b =>
+                {
+                    b.Navigation("Collaborations");
+                });
+
+            modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
+                {
+                    b.Navigation("Collaborations");
                 });
 #pragma warning restore 612, 618
         }

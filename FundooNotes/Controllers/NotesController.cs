@@ -25,7 +25,7 @@ namespace FundooNotes.Controllers
             _notesBL = notesBL;
             _config = config;
         }
-        [Authorize]
+    
         [HttpPost]
         public IActionResult CreateNotes(AddNotesModel model)
         {
@@ -51,7 +51,7 @@ namespace FundooNotes.Controllers
                 return this.BadRequest(new { success = false, message = ex.Message });
             }
         }
-        [Authorize]
+       
         // GET: api/user
         [HttpGet]
         public IActionResult Display()
@@ -62,7 +62,7 @@ namespace FundooNotes.Controllers
         }
 
 
-        [Authorize]
+     
         [HttpDelete("{Id}")]
         public IActionResult DeleteNotes(long Id)
         {
@@ -84,11 +84,11 @@ namespace FundooNotes.Controllers
 
 
         }
-       [Authorize]
+   
         [HttpPut("{Id}/Archive")]
-        public IActionResult ArchiveNote()
+        public IActionResult ArchiveNote(long Id)
         {
-            var Id = GetTokenId();
+            
             var result = _notesBL.ArchiveNote( Id);
             if (result == true)
             {
@@ -99,12 +99,12 @@ namespace FundooNotes.Controllers
                 return this.BadRequest(new { success = false, message = "IsArchive function unsuccessfull" });
             }
         }
-        [Authorize]
+       
         //ISpin
-        [HttpPut("{Id}/IsPin")]
-        public IActionResult IsPin()
+        [HttpPut("{Id}/Pin")]
+        public IActionResult IsPin(long Id)
         {
-            var Id = GetTokenId();
+           
             var result = _notesBL.IsPin(Id);
             if (result == true)
             {
@@ -115,12 +115,12 @@ namespace FundooNotes.Controllers
                 return this.BadRequest(new { success = false, message = "Ispin function unsuccessfull" });
             }
         }
-        [Authorize]
+       
         //IsTrash
-        [HttpPut("{Id}")]
-        public IActionResult IsTrash()
+        [HttpPut("{Id}/Trash")]
+        public IActionResult IsTrash(long Id)
         {
-            var Id = GetTokenId();
+           
             var result = _notesBL.IsTrash(Id);
             if (result == true)
             {
@@ -132,13 +132,13 @@ namespace FundooNotes.Controllers
             }
         }
 
-        [Authorize]
+     
         //Edit Notes
         [HttpPut("{Id}")]
-        public IActionResult EditNotes(EditNotesModel editNotesModel)
+        public IActionResult EditNotes(EditNotesModel editNotesModel,long Id)
         {
 
-            var Id = GetTokenId();
+            
             var result = _notesBL.EditNotes(editNotesModel, Id);
             if (result == true)
             {
@@ -149,13 +149,12 @@ namespace FundooNotes.Controllers
                 return this.BadRequest(new { success = false, message = "Note Edition Failed" });
             }
         }
-        [Authorize]
-        [HttpPut("{Id}")]
-        public IActionResult AddReminder( AddReminderModel addReminderModel)
+       
+        [HttpPut("{Id}/Reminder")]
+        public IActionResult AddReminder( AddReminderModel addReminderModel,long Id)
         {
             try
-            {
-                var Id = GetTokenId();
+            {  
                 var result = _notesBL.AddReminder(Id, addReminderModel);
                 if (result == true)
                 {
@@ -173,14 +172,14 @@ namespace FundooNotes.Controllers
             }
         }
 
-      [Authorize]
+     
         // Change Color
         [HttpPut("{Id}/color")]
-        public IActionResult ChangeColor( ChangeColorModel changeColorModel)
+        public IActionResult ChangeColor( ChangeColorModel changeColorModel,long Id)
         {
             try
             {
-                var Id = GetTokenId();
+
                 var result = _notesBL.ChangeColor(Id, changeColorModel);
                 if (result == true)
                 {
