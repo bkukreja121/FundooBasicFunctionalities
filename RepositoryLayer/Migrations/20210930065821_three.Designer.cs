@@ -10,8 +10,8 @@ using RepositoryLayer.Context;
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20210929172209_two")]
-    partial class two
+    [Migration("20210930065821_three")]
+    partial class three
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -92,14 +92,14 @@ namespace RepositoryLayer.Migrations
                             Id = 1,
                             AddReminder = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Color = "White",
-                            CreatedDate = new DateTime(2021, 9, 29, 22, 52, 9, 344, DateTimeKind.Local).AddTicks(8365),
+                            CreatedDate = new DateTime(2021, 9, 30, 12, 28, 20, 980, DateTimeKind.Local).AddTicks(3594),
                             Image = "abc.jpg",
                             IsArchive = false,
                             IsNote = true,
                             IsPin = false,
                             IsTrash = false,
                             Message = "Hello, this is my new note",
-                            ModifiedDate = new DateTime(2021, 9, 29, 22, 52, 9, 345, DateTimeKind.Local).AddTicks(1723),
+                            ModifiedDate = new DateTime(2021, 9, 30, 12, 28, 20, 980, DateTimeKind.Local).AddTicks(7329),
                             Title = "New Note",
                             UserId = 15L
                         });

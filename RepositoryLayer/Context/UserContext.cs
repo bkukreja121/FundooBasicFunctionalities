@@ -4,18 +4,20 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-
-
-
 namespace RepositoryLayer.Context
 {
     public class UserContext : DbContext
     {
+     
+        public UserContext(DbContextOptions options) : base(options)
+       {
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=IN-BMYKYD3;Database=FundooNotesDB;Trusted_Connection=True");
-        }
+            }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server=IN-BMYKYD3;Database=FundooNotesDB;Trusted_Connection=True");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

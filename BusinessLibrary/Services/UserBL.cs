@@ -1,13 +1,14 @@
 ﻿using BusinessLibrary.Interface;
 using CommonLayer.Model;
 using RepositoryLayer.Entity;
-using RepositoryLayer.Interface;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace BusinessLibrary.Services
 {
+    using System.Collections.Generic;
+    using RepositoryLayer.Interface;
+    using System;
+ 
     public class UserBL : IUserBL
     {
         private IUserRL _userRL;
@@ -22,7 +23,7 @@ namespace BusinessLibrary.Services
             {
                 return this._userRL.Register(user);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
@@ -36,7 +37,7 @@ namespace BusinessLibrary.Services
             {
                 return this._userRL.Get(id);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
@@ -48,7 +49,7 @@ namespace BusinessLibrary.Services
             {
                 return this._userRL.Login(loginModel);
             }
-            catch(Exception ex)
+            catch(Exception )
             {
                 throw;
             }
@@ -60,7 +61,7 @@ namespace BusinessLibrary.Services
             {
                 return this._userRL.GetAll();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
@@ -72,7 +73,7 @@ namespace BusinessLibrary.Services
             {
                 return this._userRL.ResetPassword(resetPasswordModel, userId);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
@@ -84,7 +85,7 @@ namespace BusinessLibrary.Services
             {
                 return this._userRL.ForgotPassword(model);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }

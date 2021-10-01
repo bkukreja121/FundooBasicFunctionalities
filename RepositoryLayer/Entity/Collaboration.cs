@@ -13,6 +13,8 @@ namespace RepositoryLayer.Entity
             public Notes Notes { get; set; }
 
             public DateTime CreatedAt { get; set; }
+
+             public int CollaborationId { get; set; }
         }
 
 

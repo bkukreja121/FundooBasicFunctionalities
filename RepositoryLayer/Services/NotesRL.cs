@@ -1,4 +1,7 @@
-﻿using CommonLayer.Model.NotesModels;
+﻿using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using CommonLayer.Model.NotesModels;
+using Microsoft.AspNetCore.Http;
 using RepositoryLayer.Context;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
@@ -175,7 +178,50 @@ namespace RepositoryLayer.Services
             }
         }
 
-            public bool ChangeColor(long Id, ChangeColorModel changeColorModel)
+
+        [Obsolete]
+        public bool UploadImage(IFormFile file, int Id)
+        {
+            try
+            {
+                Account account = new Account(
+                    "selg",
+                    "968789572864694",
+                    "gefKxEXzG727bRz5mBN3bUww9gA");
+                var Path = file.OpenReadStream();
+                Cloudinary cloudinary = new Cloudinary(account);
+                cloudinary.Api.Secure = true;
+
+                var uploadParams = new ImageUploadParams()
+                {
+                    File = new FileDescription(file.FileName, Path)
+                    //PublicId = "myfolder/mysubfolder/my_dog",
+                    //Overwrite = true,
+                    //NotificationUrl = "https://mysite.example.com/my_notification_endpoint"
+                };
+                var uploadResult = cloudinary.Upload(uploadParams);
+                //string imageresult = uploadResult.Url.ToString();
+
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                notes.Image = uploadResult.Url.ToString();
+                _userContext.Notes.Update(notes);
+                int result = _userContext.SaveChanges();
+                if (result > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+        public bool ChangeColor(long Id, ChangeColorModel changeColorModel)
             {
             try
             {

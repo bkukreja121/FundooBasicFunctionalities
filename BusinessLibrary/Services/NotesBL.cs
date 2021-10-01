@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Interface;
 using CommonLayer.Model.NotesModels;
+using Microsoft.AspNetCore.Http;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
 using System;
@@ -40,7 +41,7 @@ namespace BusinessLayer.Services
             {
                 return this._notesRL.Display();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
@@ -63,13 +64,23 @@ namespace BusinessLayer.Services
             {
                 return this._notesRL.AddReminder(Id, addReminderModel);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
         }
 
-
+        public bool UploadImage(IFormFile file, int Id)
+        {
+            try
+            {
+                return this._notesRL.UploadImage(file, Id);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
 
         public bool EditNotes(EditNotesModel editNotesModel, long Id)
             {
@@ -77,7 +88,7 @@ namespace BusinessLayer.Services
                 {
                     return this._notesRL.EditNotes(editNotesModel, Id);
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
                     throw;
                 }
@@ -89,32 +100,32 @@ namespace BusinessLayer.Services
             {
                 return this._notesRL.ArchiveNote(Id);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
         }
-
+        //ISPin Method
         public bool IsPin(long Id)
         {
             try
             {
                 return this._notesRL.IsPin(Id);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
         }
 
-
+        //isTrash
         public bool IsTrash(long Id)
         {
             try
             {
                 return this._notesRL.IsTrash(Id);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
@@ -125,7 +136,7 @@ namespace BusinessLayer.Services
             {
                 return this._notesRL.ChangeColor(Id, changeColorModel);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }

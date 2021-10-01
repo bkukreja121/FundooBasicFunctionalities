@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Interface;
 using CommonLayer.Model.NotesModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using RepositoryLayer.Entity;
@@ -199,6 +200,34 @@ namespace FundooNotes.Controllers
         public long GetTokenId()
         {
             return Convert.ToInt64(User.FindFirst("Id").Value);
+        }
+
+        [HttpPost("upload")]
+        public IActionResult Upload(IFormFile file)
+        {
+            return Ok();
+        }
+        [HttpPut("{Id}/upload")]
+        public IActionResult UploadImage(IFormFile file, int Id)
+        {
+            try
+            {
+
+                var result = _notesBL.UploadImage(file, Id);
+                if (result == true)
+                {
+                    return this.Ok(new { success = true, message = "Image Added Successfully " });
+                }
+                else
+                {
+                    return this.BadRequest(new { success = false, message = "Image adding unsuccessfull" });
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return this.BadRequest(new { success = false, message = ex.Message });
+            }
         }
 
     }

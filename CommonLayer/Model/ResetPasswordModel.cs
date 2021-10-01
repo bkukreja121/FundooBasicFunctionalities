@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace CommonLayer.Model
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
     public class ResetPasswordModel
     {
         public string newPassword { get; set; }

@@ -1,4 +1,5 @@
 ﻿using CommonLayer.Model.NotesModels;
+using Microsoft.AspNetCore.Http;
 using RepositoryLayer.Entity;
 using System;
 using System.Collections.Generic;
@@ -21,5 +22,7 @@ namespace RepositoryLayer.Interface
         bool ChangeColor(long Id, ChangeColorModel changeColorModel);
         bool IsPin(long id);
         bool IsTrash(long id);
+
+        bool UploadImage(IFormFile file, int Id);
     }
 }

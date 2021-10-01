@@ -41,7 +41,7 @@ namespace FundooNotes
         {          
                       
 
-            services.AddDbContext<UserContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:FundooNoteDB"]));
+          services.AddDbContext<UserContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:FundooNotesDB"]));
 
             services.AddAuthentication(option =>
             {

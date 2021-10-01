@@ -1,4 +1,5 @@
 ﻿using CommonLayer.Model.NotesModels;
+using Microsoft.AspNetCore.Http;
 using RepositoryLayer.Entity;
 using System;
 using System.Collections.Generic;
@@ -24,5 +25,7 @@ namespace BusinessLayer.Interface
         bool ChangeColor(long Id, ChangeColorModel changeColorModel);
 
         bool AddReminder(long Id, AddReminderModel addReminderModel);
+
+        bool UploadImage(IFormFile file, int Id);
     }
 }
