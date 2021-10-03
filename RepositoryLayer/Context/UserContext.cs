@@ -14,6 +14,7 @@ namespace RepositoryLayer.Context
 
             }
 
+
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseSqlServer("Server=IN-BMYKYD3;Database=FundooNotesDB;Trusted_Connection=True");
@@ -25,7 +26,9 @@ namespace RepositoryLayer.Context
                .HasIndex(u => u.Email)
                .IsUnique();
 
+
             modelBuilder.Entity<Collaboration>().HasKey(sc => new { sc.UserId, sc.Id });
+            modelBuilder.Entity<Label>().HasKey(sc => new { sc.LabelId });
 
 
 
@@ -39,6 +42,11 @@ namespace RepositoryLayer.Context
                 .HasOne<Notes>(sc => sc.Notes)
                 .WithMany(s => s.Collaborations)
                 .HasForeignKey(sc => sc.Id);
+
+            modelBuilder.Entity<Label>()
+                .HasOne<User>(sc => sc.User)
+                .WithMany(s => s.Labels)
+                .HasForeignKey(sc => sc.UserId);
 
             modelBuilder.Entity<User>().HasData(new User
             {
@@ -83,6 +91,9 @@ namespace RepositoryLayer.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Notes> Notes { get; set; }
         public DbSet<Collaboration> Collaborations { get; set; }
+        public DbSet<Label> Labels { get; set; }
+
+
 
     }
 }
