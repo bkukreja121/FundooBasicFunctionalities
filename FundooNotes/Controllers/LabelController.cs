@@ -20,12 +20,12 @@ namespace FundooNotes.Controllers
     [ApiController]
     public class LabelController : Controller
     {
-        public static IConfiguration _config;
+       
         private ILabelBL _labelBL;
-        public LabelController(ILabelBL labelBL, IConfiguration config)
+        public LabelController(ILabelBL labelBL)
         {
             _labelBL = labelBL;
-            _config = config;
+           
         }
 
         [HttpPost]
@@ -130,22 +130,22 @@ namespace FundooNotes.Controllers
         }
 
         //Generate JWT Token
-        private static string GenerateJwtToken(long UserId, string EmailId)
-        {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+        //private static string GenerateJwtToken(long UserId, string EmailId)
+        //{
+        //    var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+        //    var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            var permClaims = new List<Claim>();
-            permClaims.Add(new Claim("Id", UserId.ToString()));
-            permClaims.Add(new Claim(ClaimTypes.Email, EmailId));
+        //    var permClaims = new List<Claim>();
+        //    permClaims.Add(new Claim("Id", UserId.ToString()));
+        //    permClaims.Add(new Claim(ClaimTypes.Email, EmailId));
 
-            var token = new JwtSecurityToken(_config["Jwt:Issuer"],
-              _config["Jwt:Issuer"],
-              permClaims,
-              expires: DateTime.Now.AddMinutes(120),
-              signingCredentials: credentials);
+        //    var token = new JwtSecurityToken(_config["Jwt:Issuer"],
+        //      _config["Jwt:Issuer"],
+        //      permClaims,
+        //      expires: DateTime.Now.AddMinutes(120),
+        //      signingCredentials: credentials);
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+        //    return new JwtSecurityTokenHandler().WriteToken(token);
+        //}
     }
 }

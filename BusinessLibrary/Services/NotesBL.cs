@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Interface;
 using CommonLayer.Model.NotesModels;
+using CommonLayer.Model.NotesModels.Response;
 using Microsoft.AspNetCore.Http;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
@@ -18,9 +19,9 @@ namespace BusinessLayer.Services
             this._notesRL = notesRL;
         }
 
-        public bool CreateNotes(AddNotesModel model)
+        public bool CreateNotes(AddNotesModel model, long userId)
         {
-            return _notesRL.CreateNotes(model);
+            return _notesRL.CreateNotes(model, userId);
         }
 
         public Notes Get(long Id)
@@ -35,6 +36,10 @@ namespace BusinessLayer.Services
             }
         }
 
+        public List<CollabResponse> GetAllCollabs(long UserId)
+        {
+            return _notesRL.GetAllCollabs(UserId);
+        }
         public IEnumerable<Notes> Display()
         {
             try
@@ -70,6 +75,17 @@ namespace BusinessLayer.Services
             }
         }
 
+        public bool AddCollaborators(int Id, AddCollaboratorResponse collaborator)
+        {
+            try
+            {
+                return this._notesRL.AddCollaborators(Id, collaborator);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
         public bool UploadImage(IFormFile file, int Id)
         {
             try

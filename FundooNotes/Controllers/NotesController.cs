@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Interface;
 using CommonLayer.Model.NotesModels;
+using CommonLayer.Model.NotesModels.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,13 +31,15 @@ namespace FundooNotes.Controllers
         [HttpPost]
         public IActionResult CreateNotes(AddNotesModel model)
         {
+            long userId = GetTokenId();
             try
             {
+
                 if (model == null)
                 {
                     return BadRequest("notes is empty.");
                 }
-                var result = _notesBL.CreateNotes(model);
+                var result = _notesBL.CreateNotes(model,userId);
                 if (result == true)
                 {
                     return this.Ok(new { success = true, message = "Note Created Successfully" });
@@ -133,7 +136,29 @@ namespace FundooNotes.Controllers
             }
         }
 
-     
+        [HttpPost("{Id}/AddCollaborator")]
+        public IActionResult AddCollaborators(int Id, AddCollaboratorResponse collaborator)
+        {
+            if (collaborator.CollaboratorId != 0 && Id != 0)
+            {
+                var result = _notesBL.AddCollaborators(Id, collaborator);
+                if (result == true)
+                {
+                    return this.Ok(new { success = true, message = "Collaborator Added Successfully " });
+                }
+                else
+                {
+                    return this.BadRequest(new { success = false, message = "Collaborator adding unsuccessfull" });
+                }
+            }
+            else
+            {
+                return this.BadRequest(new { success = false, message = "Collaborator adding unsuccessfull" });
+            }
+
+
+        }
+
         //Edit Notes
         [HttpPut("{Id}")]
         public IActionResult EditNotes(EditNotesModel editNotesModel,long Id)
@@ -197,7 +222,7 @@ namespace FundooNotes.Controllers
                 return this.BadRequest(new { success = false, message = ex.Message }); 
             }
         }
-        public long GetTokenId()
+        private long GetTokenId()
         {
             return Convert.ToInt64(User.FindFirst("Id").Value);
         }
@@ -230,6 +255,25 @@ namespace FundooNotes.Controllers
             }
         }
 
+        [HttpGet("Collabs")]
+        public ActionResult GetAllCollabs()
+        {
+            try
+            {
+                long UserId = GetTokenId();
+                var CollabList = _notesBL.GetAllCollabs(UserId);
+                if (CollabList.Count > 0)
+                {
+
+                    return Ok(new { Success = true, Message = $" You have {CollabList.Count} collabs", Collabs = CollabList });
+                }
+                return Ok(new { Success = true, Message = $" Collab list is Empty" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Success = false, ex.Message });
+            }
+        }
     }
 
 
