@@ -16,11 +16,11 @@ namespace BusinessLayer.Services
             _labelRL = labelRL;
         }
 
-        public bool AddLabel(AddLabel addLabel, long userId)
+        public bool AddLabel(AddLabel addLabel, long userId, int Id)
         {
             try
             {
-                return this._labelRL.AddLabel(addLabel, userId);
+                return this._labelRL.AddLabel(addLabel, userId,Id);
             }
             catch (Exception ex)
             {
@@ -40,11 +40,11 @@ namespace BusinessLayer.Services
             }
         }
 
-        public IEnumerable<Label> DisplayLabel()
+        public IEnumerable<LabelModel> DisplayLabel(long userId)
         {
             try
             {
-                return this._labelRL.DisplayLabel();
+                return this._labelRL.DisplayLabel(userId);
             }
             catch (Exception ex)
             {

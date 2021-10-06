@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RepositoryLayer.Migrations
 {
-    public partial class three : Migration
+    public partial class two : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace RepositoryLayer.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 columns: new[] { "CreatedDate", "ModifiedDate" },
-                values: new object[] { new DateTime(2021, 9, 30, 12, 28, 20, 980, DateTimeKind.Local).AddTicks(3594), new DateTime(2021, 9, 30, 12, 28, 20, 980, DateTimeKind.Local).AddTicks(7329) });
+                values: new object[] { new DateTime(2021, 10, 6, 22, 41, 44, 567, DateTimeKind.Local).AddTicks(2719), new DateTime(2021, 10, 6, 22, 41, 44, 567, DateTimeKind.Local).AddTicks(6034) });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -22,7 +22,7 @@ namespace RepositoryLayer.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 columns: new[] { "CreatedDate", "ModifiedDate" },
-                values: new object[] { new DateTime(2021, 9, 29, 22, 52, 9, 344, DateTimeKind.Local).AddTicks(8365), new DateTime(2021, 9, 29, 22, 52, 9, 345, DateTimeKind.Local).AddTicks(1723) });
+                values: new object[] { new DateTime(2021, 10, 6, 22, 40, 53, 319, DateTimeKind.Local).AddTicks(5622), new DateTime(2021, 10, 6, 22, 40, 53, 319, DateTimeKind.Local).AddTicks(8656) });
         }
     }
 }

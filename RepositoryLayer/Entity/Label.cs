@@ -12,6 +12,8 @@ namespace RepositoryLayer.Entity
         public string LabelName { get; set; }
         public long UserId { get; set; }
         public User User { get; set; }
+        public int Id { get; set; }
+        public Notes Notes { get; set; }
         public DateTime CreatedDateTime { get; set; }
         public DateTime ModifiedDateTime { get; set; }
     }

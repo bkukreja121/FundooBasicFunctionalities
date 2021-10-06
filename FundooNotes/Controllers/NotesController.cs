@@ -64,7 +64,7 @@ namespace FundooNotes.Controllers
         //    IEnumerable<Notes> notes = _notesBL.Display(userId);
         //    return Ok(notes);
         //}
-
+        [HttpGet]
         public IActionResult DisplayNotes()
         {
             long userId = GetTokenId();

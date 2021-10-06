@@ -20,12 +20,13 @@ namespace RepositoryLayer.Services
             _configuration = configuration;
         }
 
-        public bool AddLabel(AddLabel addLabel, long userId)
+        public bool AddLabel(AddLabel addLabel, long userId, int Id)
         {
             Label labelEntity = new Label();
             labelEntity.LabelId = addLabel.LabelId;
             labelEntity.LabelName = addLabel.LabelName;
             labelEntity.UserId = userId;
+            labelEntity.Id = Id;
             labelEntity.CreatedDateTime = DateTime.Now;
             labelEntity.ModifiedDateTime = DateTime.Now;
             _userContext.Labels.Add(labelEntity);
@@ -65,11 +66,30 @@ namespace RepositoryLayer.Services
             }
         }
 
-        public IEnumerable<Label> DisplayLabel()
+       
+
+        public IEnumerable<LabelModel> DisplayLabel(long userId)
         {
             try
             {
-                return _userContext.Labels.ToList();
+                //List<Label> label = _userContext.Labels.Where(x => x.UserId == userId ).ToList();
+
+                //return label;
+
+                var query = _userContext.Labels.Join(_userContext.Notes, label => label.Id, notes => notes.Id, (label, notes) => new LabelModel
+                {
+                    LabelId = label.LabelId,
+                    LabelName = label.LabelName,
+                    UserId = userId,
+                    Id = label.Id,
+                    Title = notes.Title,
+                    Message = notes.Message,
+                    Image = notes.Image,
+                    Color = notes.Color
+
+                }).ToList();
+                return query;
+                //return _userContext.Labels.ToList();
             }
             catch (Exception)
             {

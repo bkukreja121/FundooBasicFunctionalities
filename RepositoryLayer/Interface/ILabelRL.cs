@@ -8,10 +8,10 @@ namespace RepositoryLayer.Interface
 {
     public interface ILabelRL
     {
-        bool AddLabel(AddLabel addLabel, long userId);
+        bool AddLabel(AddLabel addLabel, long userId, int Id);
         bool EditLabel(EditLabel editLabelModel, long labelId);
         Label Get(long labelId);
         bool DeleteLabel(Label label);
-        IEnumerable<Label> DisplayLabel();
+        IEnumerable<LabelModel> DisplayLabel(long userId);
     }
 }

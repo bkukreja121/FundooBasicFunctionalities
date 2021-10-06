@@ -27,6 +27,9 @@ namespace RepositoryLayer.Entity
         public bool IsTrash { get; set; }
 
         public IList<Collaboration> Collaborations { get; set; }
+
+        public IList<Label> Labels { get; set; }
+
         //public virtual User User { get; set; }
     }
 }

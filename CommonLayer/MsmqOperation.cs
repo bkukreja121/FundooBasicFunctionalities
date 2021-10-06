@@ -54,7 +54,7 @@ namespace CommonLayer
 
             
             }
-            catch (MessageQueueException qexception)
+            catch (MessageQueueException )
             {
                 throw;
             }

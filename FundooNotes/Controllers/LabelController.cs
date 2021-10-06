@@ -28,8 +28,8 @@ namespace FundooNotes.Controllers
            
         }
 
-        [HttpPost]
-        public IActionResult AddLabel(AddLabel addLabel)
+        [HttpPost("{Id}")]
+        public IActionResult AddLabel(AddLabel addLabel,int Id)
         {
             var userId = GetTokenId();
             try
@@ -38,7 +38,7 @@ namespace FundooNotes.Controllers
                 {
                     return BadRequest("Employee is null.");
                 }
-                var result = _labelBL.AddLabel(addLabel, userId);
+                var result = _labelBL.AddLabel(addLabel, userId,Id);
                 if (result == true)
                 {
                     return this.Ok(new { success = true, message = "Label Created Successfully" });
@@ -112,9 +112,10 @@ namespace FundooNotes.Controllers
         [HttpGet]
         public IActionResult DisplayLabel()
         {
+            long userId = GetTokenId();
             try
             {
-                IEnumerable<Label> labels = _labelBL.DisplayLabel();
+                IEnumerable<LabelModel> labels = _labelBL.DisplayLabel(userId);
                 return Ok(labels);
             }
             catch (Exception ex)
