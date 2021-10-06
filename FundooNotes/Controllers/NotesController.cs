@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace FundooNotes.Controllers
 {
-
+    [Authorize]
     [Route("api/notes")]
     [ApiController]
     public class NotesController : ControllerBase
@@ -56,26 +56,41 @@ namespace FundooNotes.Controllers
             }
         }
        
-        // GET: api/user
-        [HttpGet]
-        public IActionResult Display()
-        {
+        //// GET: api/user
+        //[HttpGet]
+        //public IActionResult Display()
+        //{
 
-            IEnumerable<Notes> notes = _notesBL.Display();
-            return Ok(notes);
+        //    IEnumerable<Notes> notes = _notesBL.Display(userId);
+        //    return Ok(notes);
+        //}
+
+        public IActionResult DisplayNotes()
+        {
+            long userId = GetTokenId();
+            try
+            {
+                IEnumerable<Notes> notes = _notesBL.Display(userId);
+                return Ok(notes);
+            }
+            catch (Exception ex)
+            {
+
+                return this.BadRequest(new { success = false, message = ex.Message });
+            }
         }
 
 
-     
         [HttpDelete("{Id}")]
         public IActionResult DeleteNotes(long Id)
         {
+            long userId = GetTokenId();
             Notes notes = _notesBL.Get(Id);
             if (notes == null)
             {
                 return NotFound("The Employee record couldn't be found.");
             }
-            var result = _notesBL.Delete(notes);
+            var result = _notesBL.Delete(notes, userId);
 
             if (result == true)
             {
@@ -92,8 +107,8 @@ namespace FundooNotes.Controllers
         [HttpPut("{Id}/Archive")]
         public IActionResult ArchiveNote(long Id)
         {
-            
-            var result = _notesBL.ArchiveNote( Id);
+            long userId = GetTokenId();
+            var result = _notesBL.ArchiveNote( Id,userId);
             if (result == true)
             {
                 return this.Ok(new { success = true, message = "IsArchive function successfull" });
@@ -108,8 +123,8 @@ namespace FundooNotes.Controllers
         [HttpPut("{Id}/Pin")]
         public IActionResult IsPin(long Id)
         {
-           
-            var result = _notesBL.IsPin(Id);
+            long userId = GetTokenId();
+            var result = _notesBL.IsPin(Id,userId);
             if (result == true)
             {
                 return this.Ok(new { success = true, message = "Ispin function successfull" });
@@ -124,8 +139,8 @@ namespace FundooNotes.Controllers
         [HttpPut("{Id}/Trash")]
         public IActionResult IsTrash(long Id)
         {
-           
-            var result = _notesBL.IsTrash(Id);
+            long userId = GetTokenId();
+            var result = _notesBL.IsTrash(Id, userId);
             if (result == true)
             {
                 return this.Ok(new { success = true, message = "IsTrash function successfull" });
@@ -139,9 +154,10 @@ namespace FundooNotes.Controllers
         [HttpPost("{Id}/AddCollaborator")]
         public IActionResult AddCollaborators(int Id, AddCollaboratorResponse collaborator)
         {
+            long userId = GetTokenId();
             if (collaborator.CollaboratorId != 0 && Id != 0)
             {
-                var result = _notesBL.AddCollaborators(Id, collaborator);
+                var result = _notesBL.AddCollaborators(Id, collaborator,userId);
                 if (result == true)
                 {
                     return this.Ok(new { success = true, message = "Collaborator Added Successfully " });
@@ -161,11 +177,13 @@ namespace FundooNotes.Controllers
 
         //Edit Notes
         [HttpPut("{Id}")]
+
         public IActionResult EditNotes(EditNotesModel editNotesModel,long Id)
         {
 
-            
-            var result = _notesBL.EditNotes(editNotesModel, Id);
+            long userId = GetTokenId();
+            var result = _notesBL.EditNotes(editNotesModel, Id, userId);
+            long UserId = GetTokenId();
             if (result == true)
             {
                 return this.Ok(new { success = true, message = "Notes Edited Successfully" });
@@ -180,8 +198,10 @@ namespace FundooNotes.Controllers
         public IActionResult AddReminder( AddReminderModel addReminderModel,long Id)
         {
             try
-            {  
-                var result = _notesBL.AddReminder(Id, addReminderModel);
+
+            {
+                long userId = GetTokenId();
+                var result = _notesBL.AddReminder(Id, addReminderModel,userId);
                 if (result == true)
                 {
                     return this.Ok(new { success = true, message = "Reminder Added Successfully " });
@@ -205,8 +225,8 @@ namespace FundooNotes.Controllers
         {
             try
             {
-
-                var result = _notesBL.ChangeColor(Id, changeColorModel);
+                long userId = GetTokenId();
+                var result = _notesBL.ChangeColor(Id, changeColorModel, userId);
                 if (result == true)
                 {
                     return this.Ok(new { success = true, message = "Color change successfull" });
@@ -237,8 +257,8 @@ namespace FundooNotes.Controllers
         {
             try
             {
-
-                var result = _notesBL.UploadImage(file, Id);
+                long userId = GetTokenId();
+                var result = _notesBL.UploadImage(file, Id, userId);
                 if (result == true)
                 {
                     return this.Ok(new { success = true, message = "Image Added Successfully " });
@@ -260,8 +280,8 @@ namespace FundooNotes.Controllers
         {
             try
             {
-                long UserId = GetTokenId();
-                var CollabList = _notesBL.GetAllCollabs(UserId);
+                long userId = GetTokenId();
+                var CollabList = _notesBL.GetAllCollabs(userId);
                 if (CollabList.Count > 0)
                 {
 

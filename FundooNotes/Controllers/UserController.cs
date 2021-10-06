@@ -64,7 +64,7 @@ namespace FundooNotes.Controllers
                 var result = userBL.Register(user);
                 if (result == true)
                 {
-                    return this.Ok(new { success = true, message = "User successfully Registered" });
+                    return this.Ok(new { success = true, message = "User successfully Registered", user.FirstName, user.LastName, user.Email });
                 }
                 else
                 {

@@ -13,24 +13,24 @@ namespace BusinessLayer.Interface
     {
         bool CreateNotes(AddNotesModel model, long userId);
 
-        IEnumerable<Notes> Display();
+        IEnumerable<Notes> Display(long userId);
         Notes Get(long Id);
-        bool Delete(Notes notes);
-        bool EditNotes(EditNotesModel editNotesModel, long Id);
-        bool ArchiveNote(long Id);
+        bool Delete(Notes notes, long userId);
+        bool EditNotes(EditNotesModel editNotesModel, long Id,long userId);
+        bool ArchiveNote(long Id, long userId);
 
-        bool IsPin(long Id);
+        bool IsPin(long Id, long userId);
 
         List<CollabResponse> GetAllCollabs(long UserId);
-        bool IsTrash(long Id);
+        bool IsTrash(long Id, long userId);
 
-        bool ChangeColor(long Id, ChangeColorModel changeColorModel);
+        bool ChangeColor(long Id, ChangeColorModel changeColorModel, long userId);
 
-        bool AddReminder(long Id, AddReminderModel addReminderModel);
+        bool AddReminder(long Id, AddReminderModel addReminderModel, long userId);
 
-        bool UploadImage(IFormFile file, int Id);
+        bool UploadImage(IFormFile file, int Id, long userId);
 
-        bool AddCollaborators(int Id, AddCollaboratorResponse collaborator);
+        bool AddCollaborators(int Id, AddCollaboratorResponse collaborator,long userId);
 
 
 

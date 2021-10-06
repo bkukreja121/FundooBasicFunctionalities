@@ -40,11 +40,11 @@ namespace BusinessLayer.Services
         {
             return _notesRL.GetAllCollabs(UserId);
         }
-        public IEnumerable<Notes> Display()
+        public IEnumerable<Notes> Display(long userId)
         {
             try
             {
-                return this._notesRL.Display();
+                return this._notesRL.Display(userId);
             }
             catch (Exception )
             {
@@ -52,22 +52,22 @@ namespace BusinessLayer.Services
             }
         }
 
-        public bool Delete(Notes notes)
+        public bool Delete(Notes notes,long userId )
         {
             try
             {
-                return this._notesRL.Delete(notes);
+                return this._notesRL.Delete(notes,userId);
             }
             catch (Exception ex)
             {
                 throw;
             }
         }
-        public bool AddReminder(long Id, AddReminderModel addReminderModel)
+        public bool AddReminder(long Id, AddReminderModel addReminderModel,long userId)
         {
             try
             {
-                return this._notesRL.AddReminder(Id, addReminderModel);
+                return this._notesRL.AddReminder(Id, addReminderModel,userId);
             }
             catch (Exception )
             {
@@ -75,22 +75,23 @@ namespace BusinessLayer.Services
             }
         }
 
-        public bool AddCollaborators(int Id, AddCollaboratorResponse collaborator)
+        public bool AddCollaborators(int Id, AddCollaboratorResponse collaborator,long userId)
         {
+
             try
             {
-                return this._notesRL.AddCollaborators(Id, collaborator);
+                return this._notesRL.AddCollaborators(Id, collaborator,userId);
             }
             catch (Exception ex)
             {
                 throw;
             }
         }
-        public bool UploadImage(IFormFile file, int Id)
+        public bool UploadImage(IFormFile file, int Id,long userId)
         {
             try
             {
-                return this._notesRL.UploadImage(file, Id);
+                return this._notesRL.UploadImage(file, Id,userId);
             }
             catch (Exception ex)
             {
@@ -98,11 +99,11 @@ namespace BusinessLayer.Services
             }
         }
 
-        public bool EditNotes(EditNotesModel editNotesModel, long Id)
+        public bool EditNotes(EditNotesModel editNotesModel, long Id, long userId)
             {
                 try
                 {
-                    return this._notesRL.EditNotes(editNotesModel, Id);
+                    return this._notesRL.EditNotes(editNotesModel, Id, userId);
                 }
                 catch (Exception )
                 {
@@ -110,11 +111,11 @@ namespace BusinessLayer.Services
                 }
             }
 
-        public bool ArchiveNote(long Id)
+        public bool ArchiveNote(long Id,long userId)
         {
             try
             {
-                return this._notesRL.ArchiveNote(Id);
+                return this._notesRL.ArchiveNote(Id,userId);
             }
             catch (Exception )
             {
@@ -122,11 +123,11 @@ namespace BusinessLayer.Services
             }
         }
         //ISPin Method
-        public bool IsPin(long Id)
+        public bool IsPin(long Id, long userId)
         {
             try
             {
-                return this._notesRL.IsPin(Id);
+                return this._notesRL.IsPin(Id, userId);
             }
             catch (Exception )
             {
@@ -135,22 +136,22 @@ namespace BusinessLayer.Services
         }
 
         //isTrash
-        public bool IsTrash(long Id)
+        public bool IsTrash(long Id, long userId)
         {
             try
             {
-                return this._notesRL.IsTrash(Id);
+                return this._notesRL.IsTrash(Id, userId);
             }
             catch (Exception )
             {
                 throw;
             }
         }
-        public bool ChangeColor(long Id, ChangeColorModel changeColorModel)
+        public bool ChangeColor(long Id, ChangeColorModel changeColorModel, long userId)
         {
             try
             {
-                return this._notesRL.ChangeColor(Id, changeColorModel);
+                return this._notesRL.ChangeColor(Id, changeColorModel, userId);
             }
             catch (Exception )
             {

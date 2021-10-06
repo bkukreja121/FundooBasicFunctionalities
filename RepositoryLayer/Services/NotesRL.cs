@@ -82,12 +82,12 @@ namespace RepositoryLayer.Services
             return _userContext.Notes.FirstOrDefault(e => e.Id == Id);
         }
 
-        public IEnumerable<Notes> Display()
+        public IEnumerable<Notes> Display(long userId)
         {
             return _userContext.Notes.ToList();
         }
 
-        public bool Delete(Notes notes)
+        public bool Delete(Notes notes,long userId)
         {
             try
             {
@@ -113,9 +113,9 @@ namespace RepositoryLayer.Services
         }
 
       
-            public bool EditNotes(EditNotesModel editNotesModel, long Id)
+            public bool EditNotes(EditNotesModel editNotesModel, long Id,long userId)
             {
-                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id & e.UserId==userId);
                 try
                 {
                     notes.Title = editNotesModel.Title;
@@ -141,11 +141,12 @@ namespace RepositoryLayer.Services
                 }
             }
 
-        public bool AddReminder(long Id, AddReminderModel addReminderModel)
+        public bool AddReminder(long Id, AddReminderModel addReminderModel,long userId)
         {
+          
             try
             {
-                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id & e.UserId == userId);
                 notes.AddReminder = addReminderModel.AddReminder;
                 notes.ModifiedDate = DateTime.Now;
 
@@ -168,9 +169,9 @@ namespace RepositoryLayer.Services
                 return false;
             }
         }
-        public bool ArchiveNote(long Id)
+        public bool ArchiveNote(long Id,long userId)
         {
-            Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+            Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id & e.UserId == userId);
             if (notes.IsArchive == false)
             {
 
@@ -195,10 +196,25 @@ namespace RepositoryLayer.Services
             }
         }
 
-        public bool AddCollaborators(int Id, AddCollaboratorResponse collaborator)
+        public IEnumerable<Notes> DisplayNotes(long userId)
         {
+
+            try
+            {
+                List<Notes> notes = _userContext.Notes.Where(x => x.UserId == userId).ToList();
+                return notes;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public bool AddCollaborators(int Id, AddCollaboratorResponse collaborator,long userId)
+        {
+
             Collaboration collaboration = new Collaboration();
-            collaboration.UserId = collaborator.UserId;
+            collaboration.UserId =userId;
             collaboration.Id = Id;
             collaboration.CreatedAt = DateTime.Now;
             collaboration.CollaborationId = collaborator.CollaboratorId;
@@ -215,7 +231,7 @@ namespace RepositoryLayer.Services
         }
 
         [Obsolete]
-        public bool UploadImage(IFormFile file, int Id)
+        public bool UploadImage(IFormFile file, int Id,long userId)
         {
             try
             {
@@ -237,7 +253,7 @@ namespace RepositoryLayer.Services
                 var uploadResult = cloudinary.Upload(uploadParams);
                 //string imageresult = uploadResult.Url.ToString();
 
-                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id & e.UserId == userId);
                 notes.Image = uploadResult.Url.ToString();
                 _userContext.Notes.Update(notes);
                 int result = _userContext.SaveChanges();
@@ -256,11 +272,11 @@ namespace RepositoryLayer.Services
                 throw;
             }
         }
-        public bool ChangeColor(long Id, ChangeColorModel changeColorModel)
+        public bool ChangeColor(long Id, ChangeColorModel changeColorModel,long userId)
             {
             try
             {
-                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id & e.UserId == userId);
                 notes.Color = changeColorModel.Color;
 
 
@@ -282,12 +298,12 @@ namespace RepositoryLayer.Services
             }
             }
 
-        public bool IsPin(long Id)
+        public bool IsPin(long Id,long userId)
         {
 
             try
             {
-                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id & e.UserId == userId);
                 if (notes.IsPin == false)
                 {
 
@@ -318,12 +334,12 @@ namespace RepositoryLayer.Services
             }
         }
 
-        public bool IsTrash(long Id)
+        public bool IsTrash(long Id ,long userId)
         {
 
             try
             {
-                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id);
+                Notes notes = _userContext.Notes.FirstOrDefault(e => e.Id == Id & e.UserId == userId);
                 if (notes.IsTrash == false)
                 {
 
